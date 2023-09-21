@@ -16,21 +16,23 @@ WAIntegration\WAServiceProvider::class, <br />
 Optionally you can use the Facade for shorter code. Add this to your facades: <br />
 
 ```
-'Instance' => WAIntegration\Facades\InstanceFacade::class, <br />
-'Message' => WAIntegration\Facades\MessageFacade::class, <br />
+'Instance' => WAIntegration\Facades\InstanceFacade::class, 
+'Message' => WAIntegration\Facades\MessageFacade::class, 
 ```
 
  more is coming soon. <br />
 
  Finally you can publish the config file: <br />
- php artisan vendor:publish --provider="WAIntegration\WAServiceProvider"  <br />
+```
+ php artisan vendor:publish --provider="WAIntegration\WAServiceProvider"  
+```
 
 # Configuration
  The main change to this config file (config/wa_integration.php) will be filled with your channel credentials. <br />
 
  For example, when loaded with composer, the line should look like: <br />
 ```
- 'id'            => env('WA_CHANNEL_ID','YOUR_CHANNEL_ID_HEER'), <br />
+ 'id'            => env('WA_CHANNEL_ID','YOUR_CHANNEL_ID_HEER'), 
 ```
 
 # Usage
@@ -43,32 +45,32 @@ Optionally you can use the Facade for shorter code. Add this to your facades: <b
 
    
 ```
-  - Instace::qr() <br />
+   Instace::qr()
 ```
-  // To fetch current qr  <br />
+   To fetch current qr  <br />
 ```
-  - Instance::status() <br />
+   Instance::status() 
 ```
-  // To Check If account status is active or disconnected <br />
+   To Check If account status is active or disconnected <br />
 ```
-  - Instance::disconnect() <br />
+   Instance::disconnect() 
 ```
-  // Disconnect Channel Connection <br />
+   Disconnect Channel Connection <br />
 ```
-  - Instance::clearInstance() <br />
+   Instance::clearInstance() >
 ```
-  // Remove Channel becareful when trying to use it <br />
+   Remove Channel becareful when trying to use it <br />
 ```
-  - Instance::clearInstanceData() <br />
+   Instance::clearInstanceData() 
 ```
-  // Clear all files associated with channel <br />
+   Clear all files associated with channel <br />
 
  ## - Message Facade
  
 ```
-  - Message::send([
+   Message::send([
    'phone' => '965xxxxxxxx',
    'body'  => 'Your Message Body Here'
-  ]) <br />
+  ]) 
 ```
-// Send Text Message Via Whatsapp <br />
+ Send Text Message Via Whatsapp <br />
