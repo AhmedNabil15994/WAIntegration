@@ -32,7 +32,7 @@ Optionally you can use the Facade for shorter code. Add this to your facades:
 
  # Use the facade:
  
- - Instance Facade
+ ## - Instance Facade
  
   - Instace::qr()  // To fetch current qr
   - Instance::status() // To Check If account status is active or disconnected
@@ -40,7 +40,7 @@ Optionally you can use the Facade for shorter code. Add this to your facades:
   - Instance::clearInstance() // Remove Channel becareful when trying to use it
   - Instance::clearInstanceData() // Clear all files associated with channel
 
- - Message Facade
+ ## - Message Facade
  
   - Message::send([
    'phone' => '965xxxxxxxx',
