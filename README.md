@@ -10,7 +10,7 @@ composer require ahmednabil94/wa-integration
 After updating composer, add the ServiceProvider to the providers array in config/app.php. <br />
  
 ```
-WAIntegration\WAServiceProvider::class, <br />
+WAIntegration\WAServiceProvider::class, 
 ```
 
 Optionally you can use the Facade for shorter code. Add this to your facades: <br />
@@ -57,7 +57,7 @@ Optionally you can use the Facade for shorter code. Add this to your facades: <b
 ```
    Disconnect Channel Connection <br />
 ```
-   Instance::clearInstance() >
+   Instance::clearInstance() 
 ```
    Remove Channel becareful when trying to use it <br />
 ```
@@ -69,8 +69,8 @@ Optionally you can use the Facade for shorter code. Add this to your facades: <b
  
 ```
    Message::send([
-   'phone' => '965xxxxxxxx',
-   'body'  => 'Your Message Body Here'
-  ]) 
+      'phone' => '965xxxxxxxx',
+      'body'  => 'Your Message Body Here'
+   ]) 
 ```
  Send Text Message Via Whatsapp <br />
