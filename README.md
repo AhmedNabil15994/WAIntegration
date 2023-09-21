@@ -33,12 +33,17 @@ Optionally you can use the Facade for shorter code. Add this to your facades: <b
  # Use the facade:
  
  ## - Instance Facade
- 
-  - Instace::qr()  // To fetch current qr
-  - Instance::status() // To Check If account status is active or disconnected
-  - Instance::disconnect() // Disconnect Channel Connection
-  - Instance::clearInstance() // Remove Channel becareful when trying to use it
-  - Instance::clearInstanceData() // Clear all files associated with channel
+
+   // To fetch current qr  <br />
+  - Instace::qr()
+  // To Check If account status is active or disconnected <br />
+  - Instance::status()
+  // Disconnect Channel Connection <br />
+  - Instance::disconnect()
+  // Remove Channel becareful when trying to use it <br />
+  - Instance::clearInstance()
+  // Clear all files associated with channel <br />
+  - Instance::clearInstanceData()
 
  ## - Message Facade
  
