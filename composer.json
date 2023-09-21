@@ -3,7 +3,7 @@
     "description": "simple laravel package to connect your whatsapp and send messages",
     "autoload": {
         "psr-4": {
-            "Ahmednabil94\\WaIntegration\\": "src/"
+            "WAIntegration\\": "src/"
         }
     },
     "authors": [
@@ -12,7 +12,7 @@
             "email": "mody998866@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "WAIntegration\\" : "src/"

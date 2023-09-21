@@ -1,6 +1,11 @@
 <?php
 namespace WAIntegration;
 use Illuminate\Support\ServiceProvider;
+use WAIntegration\Facades\InstanceFacade;
+use WAIntegration\Facades\MessageFacade;
+use WAIntegration\Services\InstanceService;
+use WAIntegration\Services\MessageService;
+use WAIntegration\WAconnection;
 
 class WAServiceProvider extends ServiceProvider
 {
@@ -14,6 +19,14 @@ class WAServiceProvider extends ServiceProvider
     public function register(){
         $this->app->singleton(WAconnection::class,function (){
             return new WAconnection(config('wa_integration'));
+        });
+
+        $this->app->bind('Instance', function ($app) {
+            return new InstanceService();
+        });
+
+        $this->app->bind('Message', function ($app) {
+            return new MessageService();
         });
     }
 }

@@ -18,14 +18,14 @@ class InstanceService implements InstanceContract
     }
     public function disconnect()
     {
-        return WAconnection::startRequest($this->base.'/disconnect');
+        return WAconnection::startRequest($this->base.'/disconnect','POST');
     }
     public function clearInstance()
     {
-        return WAconnection::startRequest($this->base.'/clearInstance');
+        return WAconnection::startRequest($this->base.'/clearInstance','POST');
     }
     public function clearInstanceData()
     {
-        return WAconnection::startRequest($this->base.'/clearInstanceData');
+        return WAconnection::startRequest($this->base.'/clearInstanceData','POST');
     }
 }
