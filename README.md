@@ -6,29 +6,29 @@ simple laravel package to connect your whatsapp and send messages.
 composer require ahmednabil94/wa-integration
 
 
-After updating composer, add the ServiceProvider to the providers array in config/app.php.
+After updating composer, add the ServiceProvider to the providers array in config/app.php. <br />
+ 
+WAIntegration\WAServiceProvider::class, <br />
 
-WAIntegration\WAServiceProvider::class,
+Optionally you can use the Facade for shorter code. Add this to your facades: <br />
 
-Optionally you can use the Facade for shorter code. Add this to your facades:
+'Instance' => WAIntegration\Facades\InstanceFacade::class, <br />
+'Message' => WAIntegration\Facades\MessageFacade::class, <br />
 
-'Instance' => WAIntegration\Facades\InstanceFacade::class,
-'Message' => WAIntegration\Facades\MessageFacade::class,
+ more is coming soon. <br />
 
- more is coming soon.
-
- Finally you can publish the config file:
- php artisan vendor:publish --provider="WAIntegration\WAServiceProvider" 
+ Finally you can publish the config file: <br />
+ php artisan vendor:publish --provider="WAIntegration\WAServiceProvider"  <br />
 
 # Configuration
- The main change to this config file (config/wa_integration.php) will be filled with your channel credentials.
+ The main change to this config file (config/wa_integration.php) will be filled with your channel credentials. <br />
 
- For example, when loaded with composer, the line should look like:
- 'id'            => env('WA_CHANNEL_ID','YOUR_CHANNEL_ID_HEER'),
+ For example, when loaded with composer, the line should look like: <br />
+ 'id'            => env('WA_CHANNEL_ID','YOUR_CHANNEL_ID_HEER'), <br />
 
 # Usage
 
- You can create a new (Message or Instance) instance and begin sending messages or fetching qr & account activity status.
+ You can create a new (Message or Instance) instance and begin sending messages or fetching qr & account activity status. <br />
 
  # Use the facade:
  
