@@ -1,0 +1,28 @@
+{
+    "name": "ahmednabil94/wa-integration",
+    "description": "simple laravel package to connect your whatsapp and send messages",
+    "autoload": {
+        "psr-4": {
+            "Ahmednabil94\\WaIntegration\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AhmedNabil94",
+            "email": "mody998866@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "WAIntegration\\" : "src/"
+        }
+    },
+    "extra": {
+        "laravel" : {
+            "providers": [
+                "WAIntegration\\WAServiceProvider"
+            ]
+        }
+    }
+}
