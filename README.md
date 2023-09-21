@@ -3,7 +3,7 @@ simple laravel package to connect your whatsapp and send messages.
 
 
 # Installation
-composer require ahmednabil94/wa-integration
+[composer require ahmednabil94/wa-integration]
 
 
 After updating composer, add the ServiceProvider to the providers array in config/app.php. <br />
