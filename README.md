@@ -34,21 +34,22 @@ Optionally you can use the Facade for shorter code. Add this to your facades: <b
  
  ## - Instance Facade
 
-   // To fetch current qr  <br />
+   
   - Instace::qr() <br />
-  // To Check If account status is active or disconnected <br />
+  // To fetch current qr  <br />
   - Instance::status() <br />
-  // Disconnect Channel Connection <br />
+  // To Check If account status is active or disconnected <br />
   - Instance::disconnect() <br />
-  // Remove Channel becareful when trying to use it <br />
+  // Disconnect Channel Connection <br />
   - Instance::clearInstance() <br />
-  // Clear all files associated with channel <br />
+  // Remove Channel becareful when trying to use it <br />
   - Instance::clearInstanceData() <br />
+  // Clear all files associated with channel <br />
 
  ## - Message Facade
  
- // Send Text Message Via Whatsapp <br />
   - Message::send([
    'phone' => '965xxxxxxxx',
    'body'  => 'Your Message Body Here'
-  ]) <br /> 
+  ]) <br />
+// Send Text Message Via Whatsapp <br />
