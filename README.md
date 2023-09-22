@@ -61,7 +61,7 @@ Optionally you can use the Facade for shorter code. Add this to your facades: <b
 ```
    Instance::clearInstance() 
 ```
-   Remove Channel becareful when trying to use it <br />
+   Delete Channel, becareful when trying to use it <br />
 ```
    Instance::clearInstanceData() 
 ```
