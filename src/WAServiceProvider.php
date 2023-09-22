@@ -18,7 +18,7 @@ class WAServiceProvider extends ServiceProvider
 
     public function register(){
         $this->app->singleton(WAconnection::class,function (){
-            return new WAconnection(config('wa_integration'));
+            return new WAconnection();
         });
 
         $this->app->bind('Instance', function ($app) {

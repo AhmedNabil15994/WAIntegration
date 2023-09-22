@@ -8,27 +8,24 @@ class WAconnection
     protected $identifier;
 
     protected static $baseUrl = 'https://app.gowasl.com/api/channels';
-    function __construct($data){
-        $this->id = $data['id'];
-        $this->token = $data['token'];
-        $this->identifier = $data['identifier'];
+    function __construct(){
+        $this->id = config('wa_integration.id');
+        $this->token = config('wa_integration.token');
+        $this->identifier = config('wa_integration.identifier');
     }
 
-    public static function startRequest($requestSegment,$type = "GET",$data=[]){
+    public function startRequest($requestSegment,$type = "GET",$data=[]){
 
         $url = self::$baseUrl.$requestSegment;
-        $id  = self::getID();
-        $token = self::getTOKEN();
-        $identifier = "Bearer ".self::getIDENTIFIER();
 
         try {
             $curl = curl_init();
 
             curl_setopt($curl, CURLOPT_HTTPHEADER, array(
                 'Content-Type: application/json',
-                "ID: {$id}",
-                "TOKEN: {$token}",
-                "Authorization: {$identifier}",
+                "ID: {$this->id}",
+                "TOKEN: {$this->token}",
+                "Authorization: {$this->identifier}",
             ));
 
             curl_setopt_array($curl, array(
@@ -58,17 +55,5 @@ class WAconnection
                 'error' => $e->getMessage(),
             ],500);
         }
-    }
-
-    static function getID(){
-        return config('wa_integration.id');
-    }
-
-    static function getTOKEN(){
-        return config('wa_integration.token');
-    }
-
-    static function getIDENTIFIER(){
-        return config('wa_integration.identifier');
     }
 }

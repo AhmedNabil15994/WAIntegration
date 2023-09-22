@@ -10,6 +10,6 @@ class MessageService implements MessageContract
     public $base = '/messages';
     public function send($data)
     {
-        return WAconnection::startRequest($this->base.'/sendMessage','POST',$data);
+        return (new WAconnection())->startRequest($this->base.'/sendMessage','POST',$data);
     }
 }

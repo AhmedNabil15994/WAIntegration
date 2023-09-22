@@ -10,22 +10,22 @@ class InstanceService implements InstanceContract
     public $base = '/instances';
     public function qr()
     {
-        return WAconnection::startRequest($this->base.'/qr');
+        return (new WAconnection())->startRequest($this->base.'/qr');
     }
     public function status()
     {
-        return WAconnection::startRequest($this->base.'/status');
+        return (new WAconnection())->startRequest($this->base.'/status');
     }
     public function disconnect()
     {
-        return WAconnection::startRequest($this->base.'/disconnect','POST');
+        return (new WAconnection())->startRequest($this->base.'/disconnect','POST');
     }
     public function clearInstance()
     {
-        return WAconnection::startRequest($this->base.'/clearInstance','POST');
+        return (new WAconnection())->startRequest($this->base.'/clearInstance','POST');
     }
     public function clearInstanceData()
     {
-        return WAconnection::startRequest($this->base.'/clearInstanceData','POST');
+        return (new WAconnection())->startRequest($this->base.'/clearInstanceData','POST');
     }
 }
