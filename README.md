@@ -32,7 +32,9 @@ Optionally you can use the Facade for shorter code. Add this to your facades: <b
 
  For example, when loaded with composer, the line should look like: <br />
 ```
- 'id'            => env('WA_CHANNEL_ID','YOUR_CHANNEL_ID_HEER'), 
+ 'id'            => env('WA_CHANNEL_ID','YOUR_CHANNEL_ID_HERE'),
+ 'token'            => env('WA_CHANNEL_TOKEN','YOUR_CHANNEL_TOKEN_HERE'),
+ 'identifier'            => env('WA_IDENTIFIER','YOUR_CHANNEL_OWNER_IDENTIFIER_HERE'), 
 ```
 
 # Usage
