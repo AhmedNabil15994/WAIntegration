@@ -1,6 +1,6 @@
 <?php
 
-namespace WaIntegration\Contracts;
+namespace WAIntegration\Contracts;
 
 interface MessageContract
 {
