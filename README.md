@@ -75,5 +75,5 @@ Optionally you can use the Facade for shorter code. Add this to your facades: <b
       'body'  => 'Your Message Body Here'
    ]) 
 ```
- Send Text Message Via Whatsapp <br />
+ Send Text Message Via Whatsapp <br/>
  Note: Your Connection status must be connected it means that you had already scanned QR.
