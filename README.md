@@ -1,4 +1,4 @@
-# WAIntegration
+# WAIntegration 
 simple laravel package to connect your whatsapp and send messages.
 
 
